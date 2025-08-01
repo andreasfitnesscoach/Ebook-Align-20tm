@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align•20™ - Guide de remise en forme pour femmes dirigeantes débordées</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            min-height: 297mm;
+            page-break-after: always;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .cover-page {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1" fill="white" opacity="0.05"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            z-index: 1;
+        }
+        
+        .cover-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 3rem;
+            padding: 1rem 2rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .author {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 2rem;
+        }
+        
+        .cta-button {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: white;
+            color: #ff6b6b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Styles pour les liens du sommaire */
+        .toc-link {
+            color: #2c3e50;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover {
+            background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
+            color: #ff6b6b;
+            transform: translateX(5px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .toc-section {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #4ecdc4;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #4ecdc4;
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem 0;
+            position: relative;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        h4 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #4ecdc4;
+            margin: 1.5rem 0;
+        }
+        
+        .workout-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .workout-title {
+            color: #ff6b6b;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .tips-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .tips-title {
+            color: #856404;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #4ecdc4;
+            text-align: center;
+            padding: 1.5rem;
+            border-left: 4px solid #ff6b6b;
+            background: #f8f9fa;
+            margin: 2rem 0;
+        }
+        
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .recipe-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .emoji {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .time {
+            font-weight: 600;
+            color: #ff6b6b;
+            min-width: 80px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer a:hover {
+            background: white;
+            color: #ff6b6b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        @media print {
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+        
+        .scoring-table {
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        .scoring-table td {
+            text-align: center;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+        
+        .scoring-table .question {
+            text-align: left;
+            padding-left: 1rem;
+        }
+        
+        /* Style pour les cases à cocher cliquables */
+        .checkbox-input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        
+        /* Bouton Accueil */
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #4ecdc4, #ff6b6b);
+        }
+        
+        /* Pagination - style global */
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        /* Masquer complètement la pagination sur la couverture */
+        .cover-page .page-number,
+        .cover-page + * .page-number:first-of-type {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE DE COUVERTURE -->
+<div class="page cover-page">
+    <div class="cover-content">
+        <div class="logo">ALIGN•20™</div>
+        <div class="subtitle">Guide ultime de remise en forme<br>pour femmes dirigeantes débordées</div>
+        <div class="tagline">« 20 minutes bien pensées valent toujours mieux que 5 heures qu'on ne fera jamais. »</div>
+        <div class="author">Par Andréas — Coach & créateur de la méthode Align•20™</div>
+        <a href="https://calendly.com/andreas-roux/coaching" target="_blank" class="cta-button">JE RÉSERVE MON APPEL OFFERT (15 min)</a>
+    </div>
+</div>
+
+<!-- SOMMAIRE -->
+<div class="page" id="sommaire">
+    <h1>Sommaire</h1>
+    
+    <div style="line-height: 2; font-size: 1.1rem;">
+        <div class="toc-section">
+            <a href="#introduction" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">1. Introduction</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Pourquoi prendre soin de soi quand on manque déjà de temps ?</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#diagnostic" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">2. Auto‑diagnostic éclair « Prête‑à‑changer »</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Évaluez votre niveau d'alignement actuel</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#workouts" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">3. Les 5 micro‑workouts de 20 minutes</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">3.1 Cardio‑Tonic</p>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">3.2 Strength 20</p>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">3.3 Yoga Reset</p>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">3.4 Core Ignite</p>
+                <p style="margin-left: 1rem; margin-bottom: 0;">3.5 Plyo Boost</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#batch-cooking" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">4. Batch‑cooking « Dirigeante 7 jours »</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">• Modèle d'assiette équilibrée</p>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">• Planning repas de la semaine</p>
+                <p style="margin-left: 1rem; margin-bottom: 0.5rem;">• Liste de courses optimisée</p>
+                <p style="margin-left: 1rem; margin-bottom: 0;">• Organisation de la session batch</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#organisation" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">5. Organisation & time‑blocking</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Journée type et stratégies d'intégration</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#etude-cas" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">6. Étude de cas – Emma</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Programme 12 semaines et résultats concrets</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#conclusion" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">7. Conclusion</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Bâtir un style de vie durable</p>
+            </a>
+        </div>
+        
+        <div class="toc-section">
+            <a href="#bonus" class="toc-link">
+                <h3 style="color: #ff6b6b; margin-bottom: 1rem;">BONUS</h3>
+                <p style="margin-left: 1rem; margin-bottom: 0;">Test ALIGN & plan valeurs</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- INTRODUCTION -->
+<div class="page" id="introduction">
+    <h1>1. Introduction</h1>
+    <h2>Pourquoi prendre soin de soi quand on manque déjà de temps ?</h2>
+    
+    <p>La majorité des dirigeantes gèrent tout… sauf leur propre énergie. Dans ces pages, vous verrez comment des micro‑séances ciblées et une organisation alimentaire maline peuvent changer votre silhouette, votre vitalité et votre sérénité sans empiéter sur vos responsabilités professionnelles.</p>
+    
+    <div class="highlight-box">
+        <h3>Édito d'alignement</h3>
+        <p>On vous a longtemps vendu « 4 h de salle + diète extrême ». <strong>Faux !</strong> Ce qu'il faut, c'est aligner vos valeurs et vos actions. 20 minutes placées dans l'agenda activent muscles, cardio, posture et mental — puis vous enchaînez votre journée, sans rupture de productivité.</p>
+    </div>
+    
+    <div class="footer">
+        <a href="https://calendly.com/andreas-roux/coaching" target="_blank">Je réserve mon appel offert</a>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 1</div>
+</div>
+
+<!-- AUTO-DIAGNOSTIC -->
+<div class="page" id="diagnostic">
+    <h1>2. Auto‑diagnostic éclair « Prête‑à‑changer »</h1>
+    
+    <div class="highlight-box">
+        <h3>Mode d'emploi</h3>
+        <p>Pour chaque affirmation ci-dessous, cochez une note de 1 (pas du tout vrai pour moi) à 5 (totalement vrai). Additionnez vos points puis lisez la synthèse.</p>
+    </div>
+    
+    <div class="table-container">
+        <table class="scoring-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Affirmation</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="question">Mes choix reflètent mes valeurs clés.</td>
+                    <td><input type="radio" name="q1" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q1" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q1" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q1" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q1" value="5" class="checkbox-input"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="question">Mon agenda pro me laisse du temps santé.</td>
+                    <td><input type="radio" name="q2" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q2" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q2" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q2" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q2" value="5" class="checkbox-input"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="question">Mes temps perso me rechargent vraiment.</td>
+                    <td><input type="radio" name="q3" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q3" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q3" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q3" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q3" value="5" class="checkbox-input"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="question">Mon entourage & mon environnement me tirent vers le haut.</td>
+                    <td><input type="radio" name="q4" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q4" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q4" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q4" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q4" value="5" class="checkbox-input"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="question">Mon alimentation soutient mon énergie.</td>
+                    <td><input type="radio" name="q5" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q5" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q5" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q5" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q5" value="5" class="checkbox-input"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="question">Je bouge assez et me sens en forme.</td>
+                    <td><input type="radio" name="q6" value="1" class="checkbox-input"></td>
+                    <td><input type="radio" name="q6" value="2" class="checkbox-input"></td>
+                    <td><input type="radio" name="q6" value="3" class="checkbox-input"></td>
+                    <td><input type="radio" name="q6" value="4" class="checkbox-input"></td>
+                    <td><input type="radio" name="q6" value="5" class="checkbox-input"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="tips-box">
+        <div class="tips-title">Calcul</div>
+        <p>Additionnez vos 6 notes → Score total /30</p>
+    </div>
+    
+    <h3>Synthèse</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Score</th>
+                <th>Profil</th>
+                <th>Lecture rapide</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>24 – 30</td>
+                <td><strong>A – Dirigeante alignée</strong></td>
+                <td>On passe directement au niveau supérieur.</td>
+            </tr>
+            <tr>
+                <td>18 – 23</td>
+                <td><strong>B – Tournant</strong></td>
+                <td>Quelques ajustements + 20 min/jour feront la différence.</td>
+            </tr>
+            <tr>
+                <td>≤ 17</td>
+                <td><strong>C – Décalage</strong></td>
+                <td>Démarrez les micro‑workouts pour créer l'élan.</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 2</div>
+</div>
+
+<!-- MICRO-WORKOUTS -->
+<div class="page" id="workouts">
+    <h1>3. Les 5 micro‑workouts de 20 minutes</h1>
+    
+    <div class="highlight-box">
+        <h3>Pourquoi des Micro-Workouts ?</h3>
+        <p>Les micro-workouts sont des séances d'exercices courtes mais intenses, conçues pour maximiser l'efficacité en un minimum de temps. Idéales pour les femmes occupées, elles permettent de tonifier le corps, de brûler des calories et d'améliorer la santé cardiovasculaire.</p>
+    </div>
+    
+    <p><strong>Chaque séance = 4 cycles 45 s effort / 15 s repos</strong></p>
+    <p><strong>Matériel :</strong> un tapis, une corde à sauter (en option), une gourde, une serviette</p>
+    
+    <div class="workout-card">
+        <div class="workout-title">3.1 Cardio‑Tonic</div>
+        <p><strong>Matériel :</strong> corde à sauter (optionnel)</p>
+        <p><strong>Exercices :</strong> Corde à sauter · Burpees step‑back · Jumping jacks · Sprints sur place</p>
+        <div class="tips-box">
+            <div class="tips-title">Tips express</div>
+            <p>Échauffe-toi 1 min en marchant ou trottinant.<br>
+            Vise un rythme constant ; coupe les burpees en deux si la forme fléchit.</p>
+        </div>
+    </div>
+    
+    <div class="workout-card">
+        <div class="workout-title">3.2 Strength 20</div>
+        <p><strong>Matériel :</strong> poids libres ou sac à dos (facultatif)</p>
+        <p><strong>Exercices :</strong> Squats · Pompes (mains sur table) · Fentes alternées · Planche shoulder‑tap</p>
+        <div class="tips-box">
+            <div class="tips-title">Tips express</div>
+            <p>Mouvement lent ; compte 3 s à la descente des squats.<br>
+            Ajoute du poids seulement quand la forme reste parfaite.</p>
+        </div>
+    </div>
+    
+    <div class="workout-card">
+        <div class="workout-title">3.3 Yoga Reset</div>
+        <p><strong>Matériel :</strong> tapis</p>
+        <p><strong>Exercices :</strong> Salutation au soleil A · Chien tête en bas ↔ planche · Arbre · Respiration carrée + méditation mini</p>
+        <div class="tips-box">
+            <div class="tips-title">Tips express</div>
+            <p>Commence par trois respirations profondes.<br>
+            Tempo respiration carrée : 4-4-4-4 (inspire, bloque, expire, bloque).</p>
+        </div>
+    </div>
+    
+    <div class="workout-card">
+        <div class="workout-title">3.4 Core Ignite</div>
+        <p><strong>Matériel :</strong> tapis</p>
+        <p><strong>Exercices :</strong> Crunch reach‑through · Planche latérale · Bicycle crunch · Hollow hold ou sit‑ups</p>
+        <div class="tips-box">
+            <div class="tips-title">Tips express</div>
+            <p>Nombril rentré, bas du dos collé au sol.<br>
+            Pieds au sol sur les sit-ups si tu débutes.</p>
+        </div>
+    </div>
+    
+    <div class="workout-card">
+        <div class="workout-title">3.5 Plyo Boost</div>
+        <p><strong>Matériel :</strong> marche ou box stable (30–40 cm)</p>
+        <p><strong>Exercices :</strong> Star jumps · Frog jumps / air‑squats · High knees · Box/step jumps</p>
+        <div class="tips-box">
+            <div class="tips-title">Tips express</div>
+            <p>Atterris « comme un ninja » : pieds silencieux.<br>
+            Si les genoux protestent, remplace les sauts par des squats contrôlés.</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <a href="https://calendly.com/andreas-roux/coaching" target="_blank">Je réserve mon appel offert</a>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 3</div>
+</div>
+
+<!-- BATCH-COOKING -->
+<div class="page" id="batch-cooking">
+    <h1>4. Batch‑cooking « Dirigeante 7 jours »</h1>
+    
+    <div class="highlight-box">
+        <h3>Qu'est-ce que le Batch Cooking ?</h3>
+        <p>Le batch cooking est la préparation en une seule session des repas pour plusieurs jours. Cette méthode permet de gagner du temps, de réduire le stress en cuisine, et de s'assurer que vous mangez des repas équilibrés tout au long de la semaine.</p>
+    </div>
+    
+    <h2><span class="emoji">🥣</span>Avant de commencer : un bon petit-déj qui cale</h2>
+    <p><strong>Astuce :</strong> pensez « 3 briques » – protéines + glucides lents + bon gras.</p>
+    
+    <div class="tips-box">
+        <div class="tips-title">Exemple éclair</div>
+        <ul style="margin-left: 1rem;">
+            <li>150 g de yaourt grec nature (protéines)</li>
+            <li>2 cuillères à soupe de flocons d'avoine (féculent lent)</li>
+            <li>1 petit fruit coupé (pomme, poire, baies…)</li>
+            <li>1 cuillère à café de graines de chia ou 6 amandes (gras sain)</li>
+        </ul>
+        <p>Ce bol tourne autour de 300 kcal ; ajoutez un café ou un thé sans sucre.</p>
+    </div>
+    
+    <h2>1️⃣ Comment remplir son assiette Align•20™</h2>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>½ assiette de légumes colorés</strong> (salade, carottes, courgettes…)</li>
+        <li><strong>¼ assiette de protéines cuites</strong> : environ une tranche épaisse de la taille d'un smartphone (100-120 g)</li>
+        <li><strong>¼ assiette de féculents complets cuits</strong> : une demi-tasse (90-100 g) de quinoa, riz, lentilles…</li>
+        <li><strong>Gras malins</strong> : une cuillère à soupe d'huile d'olive ou 10 g de noix (≈ 10 amandes)</li>
+    </ul>
+    
+    <h2>2️⃣ Vos calories cibles – version rapide</h2>
+    <div class="tips-box">
+        <div class="tips-title">Calcul simple</div>
+        <ul style="margin-left: 1rem;">
+            <li>Métabolisme de base (MB) – utilisez une calculette en ligne</li>
+            <li>Multiplier par 1,55 si vous faites les micro-workouts + 5 000 pas/jour</li>
+            <li>Déficit doux : retirez ± 400 kcal pour perdre ~0,5 kg par semaine</li>
+        </ul>
+        <p><strong>Exemple :</strong> MB 1 400 kcal × 1,55 = 2 170 kcal d'entretien → objectif perte ≈ 1 700 kcal/j.</p>
+    </div>
+    
+    <div class="highlight-box">
+        <h4>Repère d'une journée à 1 700 kcal :</h4>
+        <ul style="margin-left: 1rem;">
+            <li>Petit-déj : 300 kcal</li>
+            <li>Déjeuner : 500 kcal</li>
+            <li>Collation : 150 kcal</li>
+            <li>Dîner : 450 kcal</li>
+        </ul>
+        <p><em>(Ajustez les portions ci-dessous à vos chiffres.)</em></p>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 4</div>
+</div>
+
+<!-- PLANNING REPAS -->
+<div class="page">
+    <h2>Planning Lun → Ven</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Jour</th>
+                <th>Déjeuner (~500 kcal)</th>
+                <th>Dîner (~450 kcal)</th>
+                <th>Snack (~150 kcal)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Lun</strong></td>
+                <td>Poulet 110g + légumes 250g + quinoa 100g</td>
+                <td>Salade quinoa 80g/pois chiches 80g/feta 25g + crudités</td>
+                <td>2 energy‑balls</td>
+            </tr>
+            <tr>
+                <td><strong>Mar</strong></td>
+                <td>Saumon 115g + quinoa 100g + légumes 200g</td>
+                <td>Soupe lentilles + 1 tranche pain complet</td>
+                <td>1 Carotte + 2 C.S houmous</td>
+            </tr>
+            <tr>
+                <td><strong>Mer</strong></td>
+                <td>Curry légumes 250g/lentilles 150g + lait coco 50ml</td>
+                <td>Wrap poulet 90g + crudités + 1 C.S yaourt</td>
+                <td>2 energy‑balls</td>
+            </tr>
+            <tr>
+                <td><strong>Jeu</strong></td>
+                <td>Bowl saumon 115g + riz 100g + légumes 200g + ½ avocat</td>
+                <td>Omelette 2 œufs + épinards + feta 20g</td>
+                <td>1 Pomme + 10 amandes</td>
+            </tr>
+            <tr>
+                <td><strong>Ven</strong></td>
+                <td>Salade poulet 110g + pois chiches 80g + roquette</td>
+                <td>Poêlée riz 100g + reste curry légumes</td>
+                <td>2 energy‑balls</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><em>(Samedi & dimanche : restes ou restaurant, en gardant le modèle ½-¼-¼)</em></p>
+    
+    <div class="tips-box">
+        <div class="tips-title">Conseils pratiques</div>
+        <ul style="margin-left: 1rem;">
+            <li>Buvez un grand verre d'eau 10 min avant le repas : aide à la satiété</li>
+            <li>Mangez lentement : 20 min avant de vous resservir</li>
+            <li>Si vous bougez beaucoup un jour (voyage, salon) : ajoutez ½ mug de féculents au déjeuner</li>
+            <li>Jour très calme : retirez ½ mug de féculents au dîner</li>
+        </ul>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 5</div>
+</div>
+
+<!-- LISTE DE COURSES -->
+<div class="page">
+    <h2>Liste de courses "Dirigeante 7 jours"</h2>
+    <p><em>(toujours triée par rayon, quantités pour 1 personne)</em></p>
+    
+    <h3><span class="emoji">🥬</span>Fruits & Légumes</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Courgettes</td><td>2 moyennes</td></tr>
+            <tr><td>Carottes</td><td>6 moyennes</td></tr>
+            <tr><td>Poivrons rouges</td><td>2</td></tr>
+            <tr><td>Concombre</td><td>1</td></tr>
+            <tr><td>Tomates</td><td>3</td></tr>
+            <tr><td>Avocat</td><td>1</td></tr>
+            <tr><td>Citrons</td><td>3</td></tr>
+            <tr><td>Roquette (prête à l'emploi)</td><td>1 sachet</td></tr>
+            <tr><td>Épinards frais</td><td>1 sachet</td></tr>
+            <tr><td>Fruits collation (pommes, poires…)</td><td>7 pièces</td></tr>
+            <tr><td>Banane</td><td>1</td></tr>
+            <tr><td>Fruits rouges surgelés</td><td>1 sachet</td></tr>
+        </tbody>
+    </table>
+    
+    <h3><span class="emoji">🍗</span>Viandes & Poissons</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Filets de poulet</td><td>4 pièces</td></tr>
+            <tr><td>Pavés de saumon</td><td>4 pièces</td></tr>
+        </tbody>
+    </table>
+    
+    <h3><span class="emoji">🧀</span>Produits laitiers & Œufs</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Œufs</td><td>12</td></tr>
+            <tr><td>Fromage blanc 3%</td><td>1 pot de 1kg</td></tr>
+            <tr><td>Feta</td><td>1 bloc</td></tr>
+        </tbody>
+    </table>
+    
+    <h3><span class="emoji">🥖</span>Boulangerie & Féculents</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Quinoa</td><td>1 paquet</td></tr>
+            <tr><td>Riz complet</td><td>1 paquet</td></tr>
+            <tr><td>Lentilles corail</td><td>1 paquet</td></tr>
+            <tr><td>Galettes wraps complets</td><td>1 paquet</td></tr>
+            <tr><td>Pain complet tranché</td><td>1 petit sachet</td></tr>
+        </tbody>
+    </table>
+    
+    <h3><span class="emoji">🫘</span>Légumineuses & Conserves</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Pois chiches cuits</td><td>1 bocal / boîte</td></tr>
+            <tr><td>Lait de coco</td><td>1 petite brique</td></tr>
+            <tr><td>Houmous †</td><td>à faire maison</td></tr>
+        </tbody>
+    </table>
+    
+    <h3><span class="emoji">🥜</span>Épicerie & "placard"</h3>
+    <table>
+        <thead>
+            <tr><th>Produit</th><th>Quantité</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Dattes dénoyautées</td><td>1 sachet</td></tr>
+            <tr><td>Flocons d'avoine</td><td>1 petit paquet</td></tr>
+            <tr><td>Amandes entières</td><td>1 sachet</td></tr>
+            <tr><td>Beurre de cacahuète 100%</td><td>1 pot</td></tr>
+            <tr><td>Huile d'olive</td><td>1 petite bouteille</td></tr>
+            <tr><td>Graines de chia (option petit-déj)</td><td>1 petit sachet</td></tr>
+            <tr><td>Épices : curry, paprika, herbes de Provence</td><td>1 pot de chaque</td></tr>
+        </tbody>
+    </table>
+    
+    <div class="tips-box">
+        <div class="tips-title">† Houmous express</div>
+        <p>Mixez 400 g de pois chiches rincés, 1 c. s. bombée de beurre de cacahuète, le jus d'1 citron, 1 c. s. d'huile d'olive, sel, poivre, cumin (optionnel) et un peu d'eau jusqu'à texture lisse.</p>
+        <p><strong>Voilà :</strong> tout se trouve facilement en supermarché, sans passer par l'épicerie orientale !</p>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 6</div>
+</div>
+
+<!-- ORGANISATION BATCH -->
+<div class="page">
+    <h2>Organisation de la session « batch » du dimanche</h2>
+    <p><em>(installe une minuterie d'1 h 30 et suis la danse)</em></p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Minute</th>
+                <th>Ce que tu fais</th>
+                <th>Pourquoi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>0-5</strong></td>
+                <td>Sortez toutes les courses + préchauffez le four à 200 °C</td>
+                <td>Mise en place</td>
+            </tr>
+            <tr>
+                <td><strong>5-10</strong></td>
+                <td>Rince riz, quinoa, lentilles • Les mettre chacun dans une petite casserole + eau salée (ou rice-cooker)</td>
+                <td>Lancé = temps passif</td>
+            </tr>
+            <tr>
+                <td><strong>10-15</strong></td>
+                <td>Émince courgettes, carottes, poivrons → les déposer sur 1 grande plaque, filet d'huile + paprika</td>
+                <td>Légumes rôtis</td>
+            </tr>
+            <tr>
+                <td><strong>15-20</strong></td>
+                <td>Marinade poulet (citron, herbes, huile) & saumon (citron, sel) • Dépose-les sur 2ᵉ plaque</td>
+                <td>Protéines prêtes</td>
+            </tr>
+            <tr>
+                <td><strong>20-45</strong></td>
+                <td>Les 2 plaques vont au four (20-25 min) • Les céréales cuisent en même temps</td>
+                <td>Double cuisson = gain de temps</td>
+            </tr>
+            <tr>
+                <td><strong>45-60</strong></td>
+                <td>Pendant que ça cuit : Mixe houmous (Pois chiches + beurre cacahuète) – Roule 14 energy-balls (dattes, avoine, amandes) – Lave/essore roquette & épinards</td>
+                <td>Optimise les minutes « mains libres »</td>
+            </tr>
+            <tr>
+                <td><strong>60-65</strong></td>
+                <td>Tout est cuit : sors plaques & casseroles • Laisse tiédir</td>
+                <td>On évite la vapeur dans les boîtes</td>
+            </tr>
+            <tr>
+                <td><strong>65-85</strong></td>
+                <td>Portionnage • 5 boîtes-déj : ½ légumes + ¼ poulet/saumon + ¼ quinoa/riz • 5 boîtes-dîner : ingrédients selon planning • 5 sachets de houmous / 5 pain + 7 × 2 energy-balls</td>
+                <td>Repas "grab-and-go"</td>
+            </tr>
+            <tr>
+                <td><strong>85-90</strong></td>
+                <td>Étiquettes « Lun-Midi », « Mar-Soir », etc. • 3 boîtes au congél' (ven / jeu) • Vaisselle rapide</td>
+                <td>Fini !</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="highlight-box">
+        <h4>Matériel conseillé</h4>
+        <table>
+            <thead>
+                <tr><th>Contenant</th><th>Quantité</th><th>Comment l'utiliser</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Boîtes repas 1 L (verre ou plastique BPA-free)</td><td>10 (5 lunch + 5 dîner)</td><td>Empilables, rectangulaires = gain de place</td></tr>
+                <tr><td>Petites boîtes 400 ml</td><td>3</td><td>Soupe de lentilles, houmous en portion</td></tr>
+                <tr><td>Mini-boîtes / sachets</td><td>7</td><td>Paires d'energy-balls, amandes</td></tr>
+                <tr><td>Étiquettes ou masking-tape</td><td>1 rouleau</td><td>Inscris jour & moment (« Mar-Midi »)</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Astuce :</strong> si tu pars au bureau, garde un jeu de couverts réutilisables dans le sac.</p>
+    </div>
+    
+    <div class="tips-box">
+        <div class="tips-title">Règles de conservation express</div>
+        <ul style="margin-left: 1rem;">
+            <li><strong>Frigo (0–4 °C) :</strong> plats Lun-Mer</li>
+            <li><strong>Congélateur :</strong> plats Jeu-Ven (décongèle au frigo la veille)</li>
+            <li><strong>Snacks :</strong> energy-balls jusqu'à 7 j ; houmous 5 j</li>
+        </ul>
+    </div>
+    
+    <div class="highlight-box">
+        <h4>Et après ?</h4>
+        <p>Lundi matin, tu glisses la boîte "Lun-Midi" et la collation dans ton sac. Le soir, tu prends "Lun-Soir". Recommence jusqu'à vendredi : plus de question « Qu'est-ce qu'on mange ? », tu restes dans tes calories, et tes 20 min de workout trouvent toujours leur place.</p>
+        <p><strong>Voilà, tu n'as plus qu'à lancer le chrono dimanche !</strong></p>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 7</div>
+</div>
+
+<!-- ORGANISATION & TIME-BLOCKING -->
+<div class="page" id="organisation">
+    <h1>5. Organisation & time‑blocking</h1>
+    
+    <h2>Journée type réaliste</h2>
+    
+    <div class="schedule-item">
+        <div class="time">06h45</div>
+        <div>Réveil & verre d'eau, pas d'écran avant la douche</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">07h00</div>
+        <div>Micro‑workout Align 20™, tenue prête au pied du lit</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">07h30</div>
+        <div>Douche + petit déj</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">12h30</div>
+        <div>Déjeuner</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">15h30</div>
+        <div>Pause, assouplissement 0 téléphone, petite marche</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">19h</div>
+        <div>Option séance 20 min</div>
+    </div>
+    <div class="schedule-item">
+        <div class="time">19h</div>
+        <div>Dîner</div>
+    </div>
+    
+    <h2>Où caser 20 min de sport quand le matin est (trop) dur ?</h2>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li>Chaussures de sport dans la voiture ou à côté du bureau pour attaquer la séance en fin de journée sans perdre de temps</li>
+        <li>Faire 2X10min dans la journée sur des moments calmes</li>
+        <li>Choisissez le jour au plus faible risque d'imprévu. Rendez-le non-négociable.</li>
+        <li>Ajoutez la 2ᵉ au même créneau horaire que la 1ᵉ pour automatiser.</li>
+        <li>Variez les micro-workouts ; un jour Yoga Reset pour récupérer.</li>
+    </ul>
+    
+    <div class="highlight-box">
+        <h3>Monter en puissance</h3>
+        <p><strong>S1 :</strong> 1 séance fixe → <strong>S2‑3 :</strong> 2 séances → <strong>S4‑5 :</strong> 3 séances → puis 4‑5 séances/sem.</p>
+    </div>
+    
+    <h2>Clés de succès</h2>
+    <div class="tips-box">
+        <div class="tips-title">Les 4 piliers</div>
+        <ul style="margin-left: 1rem;">
+            <li><strong>Bloquez d'abord</strong> le créneau dans l'agenda, même avant de savoir quel workout faire.</li>
+            <li><strong>Pré-positionnez</strong> tenue et tapis la veille (morning) ou dans le sac (mid-day/end-day).</li>
+            <li><strong>Micro-récompense :</strong> café spécial, podcast préféré uniquement pendant le workout.</li>
+            <li><strong>Plan B écrit :</strong> "Si je rate le matin, je fais 2 × 10 min à 12 h 15 et 16 h 00."</li>
+        </ul>
+    </div>
+    
+    <p>En avançant ainsi, la séance quotidienne deviendra aussi automatique que se brosser les dents — et toujours dans la limite 20 min max, pour rester compatible avec tes journées de dirigeante.</p>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 8</div>
+</div>
+
+<!-- ÉTUDE DE CAS EMMA -->
+<div class="page" id="etude-cas">
+    <h1>6. Étude de cas – Emma</h1>
+    <h2>Salon de coiffure, gestion solo</h2>
+    
+    <h3>6.1 Programme 12 semaines</h3>
+    
+    <div class="highlight-box">
+        <h4>1. Profil</h4>
+        <p><strong>Métier :</strong> propriétaire unique de son salon (accueil clients, coiffure, comptes, stocks).</p>
+        <p><strong>Vie perso :</strong> maman, courses, logistique maison – zéro créneau « pour elle »… sauf nos coachings.</p>
+        <p><strong>Ambition 2025 :</strong> rentrer dans son jean 38 et tenir la haute saison mariages sans douleurs lombaires.</p>
+    </div>
+    
+    <h4>Plan d'action mis en place :</h4>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>4 séances coachées + 4 autonomie (1 h)</strong> · Batch du dimanche · Pauses posture · Suivi photo‑repas.</li>
+        <li><strong>4 séances 1 h/semaine</strong> à domicile ou en visio avec moi → engagement financier + créneau calé = impossible de reporter.</li>
+        <li><strong>4 séances 1 h/semaine</strong> (programme vidéo) – elle coche la case dans l'app ; je vérifie la régularité.</li>
+        <li><strong>90 min le dimanche</strong> → 5 déj "grab-and-go", 5 dîners légers, 7 snacks → pas de perte de temps cuisine.</li>
+        <li><strong>Alarmes 11 h & 15 h 30 :</strong> 2 min d'étirements épaules/lombaires → soulage la station debout.</li>
+    </ul>
+    
+    <div class="tips-box">
+        <div class="tips-title">🔎 Note</div>
+        <p>Les micro-workouts de 20 min que je propose habituellement remplacent très bien ce format pour la plupart des clientes. Pour Emma, nous avons choisi 8 séances d'1 h car elle voulait un encadrement maximal et des résultats rapides.</p>
+    </div>
+    
+    <h3>6.2 Résultats (jour 85)</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Départ</th>
+                <th>12 sem.</th>
+                <th>Δ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Poids</strong></td>
+                <td>75,4 kg</td>
+                <td>72,95 kg</td>
+                <td><strong>– 2,45 kg</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Taille</strong></td>
+                <td>86 cm</td>
+                <td>81 cm</td>
+                <td><strong>– 5 cm</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Hanches</strong></td>
+                <td>110 cm</td>
+                <td>104 cm</td>
+                <td><strong>– 6 cm</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Muscle</strong></td>
+                <td>60,9 %</td>
+                <td>62,4 %</td>
+                <td><strong>+ 1,5 %</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Masse grasse</strong></td>
+                <td>35,2 %</td>
+                <td>33,7 %</td>
+                <td><strong>– 1,5 %</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="quote">
+        "Je gère tout, toute seule : enfants, clients, stocks, comptes. Avec le coaching payé et bloqué dans l'agenda, je n'ai plus le choix : j'y vais, point. Résultat : – 5 cm de taille et je termine mes journées debout sans doliprane !"
+        <br><strong>— Emma</strong>
+    </div>
+    
+    <h3>Facteurs clés de succès</h3>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>Créneaux non-négociables :</strong> 4 × 1 h coach + 4 × 1 h solo, fixés comme des RDV client.</li>
+        <li><strong>Repas prêts :</strong> aucune tentation industriel-sucré après 10 h debout.</li>
+        <li><strong>Feedback photo-repas</strong> "RESET anti-fringales" : ajustements nutrition en temps réel.</li>
+    </ul>
+    
+    <div class="highlight-box">
+        <h4>Et vous ?</h4>
+        <p>Vous voulez des centimètres en moins et de l'énergie en plus – sans délaisser votre business ?</p>
+    </div>
+    
+    <div class="footer">
+        <a href="https://calendly.com/andreas-roux/coaching" target="_blank">Je réserve mon appel offert</a>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 9</div>
+</div>
+
+<!-- BONUS TEST ALIGN -->
+<div class="page" id="bonus">
+    <h1>BONUS – Test ALIGN & plan valeurs</h1>
+    
+    <h2>Suis-je vraiment alignée ?</h2>
+    <p><em>Mini-guide pour tester sa vie, protéger ses valeurs et dire « non » sans culpabilité</em></p>
+    
+    <h3>1. Clarifie tes valeurs profondes (15 min)</h3>
+    
+    <table>
+        <thead>
+            <tr><th>Étape</th><th>Comment faire rapidement</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Brain-dump 3×3</strong></td>
+                <td>Sur une feuille, écris 3 personnes que tu admires, 3 moments où tu t'es sentie pleinement vivante, 3 causes qui te touchent.</td>
+            </tr>
+            <tr>
+                <td><strong>Repère les mots qui reviennent</strong></td>
+                <td>Ex. : liberté, famille, créativité, impact, santé…</td>
+            </tr>
+            <tr>
+                <td><strong>Conserve 5 mots max</strong></td>
+                <td>Ignore les « ça serait bien » – garde les « je ne négocierai jamais ça ».</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="tips-box">
+        <div class="tips-title">Tip</div>
+        <p>Si tu hésites, utilise le test du regret : « Si je n'honore pas cette valeur pendant 1 an, le regret sera-t-il insupportable ? »</p>
+    </div>
+    
+    <h3>2. Passe ta vie au crible « ALIGN » (10 min)</h3>
+    
+    <table>
+        <thead>
+            <tr><th>Lettre</th><th>Question flash</th><th>Note*</th></tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>A</strong></td><td>Actions : mes choix quotidiens reflètent-ils mes 5 valeurs ?</td><td>/5</td></tr>
+            <tr><td><strong>L</strong></td><td>Lieu : mon environnement (maison, bureau) m'élève-t-il ?</td><td>/5</td></tr>
+            <tr><td><strong>I</strong></td><td>Influences : mon entourage me pousse-t-il vers le haut ?</td><td>/5</td></tr>
+            <tr><td><strong>G</strong></td><td>Growth : j'apprends chaque semaine ?</td><td>/5</td></tr>
+            <tr><td><strong>N</strong></td><td>Nourriture & self-care : j'alimente corps et esprit ?</td><td>/5</td></tr>
+        </tbody>
+    </table>
+    
+    <p><em>* Note 1 = pas du tout, 5 = totalement.</em><br>
+    <strong>Additionne /25 :</strong> 20-25 = alignée, 15-19 = à ajuster, < 15 = feu orange.</p>
+    
+    <h3>3. Plan d'action « + / – / = » (30 min)</h3>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>+ :</strong> habits / personnes / lieux à amplifier (ex. cours de céramique hebdo).</li>
+        <li><strong>– :</strong> ce qui draine (ex. scroll Instagram 1 h, collègue toxique).</li>
+        <li><strong>= :</strong> ce qui est neutre ou nécessaire (paperasse compta).</li>
+    </ul>
+    
+    <div class="highlight-box">
+        <p>➡️ Choisis <strong>1 + </strong> à solidifier, 1 – à réduire, rien de plus pour les 2 prochaines semaines.</p>
+    </div>
+    
+    <h3>4. Protège tes valeurs : l'art du « non stratégique »</h3>
+    
+    <table>
+        <thead>
+            <tr><th>Situation</th><th>Phrase courte & ferme</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Invitation qui n'honore pas tes valeurs</td><td>« Merci, je passe mon tour cette fois. »</td></tr>
+            <tr><td>Client hors cible</td><td>« Je ne suis pas la bonne personne, je préfère décliner. »</td></tr>
+            <tr><td>Comité inutile</td><td>« Je ne pourrai pas contribuer efficacement ; keep me posted par mail. »</td></tr>
+        </tbody>
+    </table>
+    
+    <div class="tips-box">
+        <div class="tips-title">Technique sandwich</div>
+        <p>Merci ➜ Non ➜ Proposition (reprogrammer, recommander quelqu'un).</p>
+    </div>
+    
+    <h3>5. Ancre les habitudes quand la charge monte</h3>
+    
+    <table>
+        <thead>
+            <tr><th>Déclencheur</th><th>Habitude-micro</th><th>Durée</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Café matin</td><td>5 s respirations profondes</td><td>1 min</td></tr>
+            <tr><td>Notification pause</td><td>10 s étirement dos</td><td>1 min</td></tr>
+            <tr><td>Fermeture PC</td><td>Gratitude: 3 victoires du jour</td><td>1 min</td></tr>
+        </tbody>
+    </table>
+    
+    <p><strong>Trois micro-rituels = 3 min/jour</strong> qui maintiennent le cap même en semaine folle.</p>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 10</div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="page" id="conclusion">
+    <h1>7. Conclusion – Bâtir un style de vie durable</h1>
+    
+    <p>Dans ce dernier chapitre, nous partagerons des astuces pour maintenir ces nouvelles habitudes saines et pour continuer à progresser, même lorsque la charge de travail augmente. Vous découvrirez comment intégrer ces principes dans votre vie quotidienne pour un bien-être durable et une réussite professionnelle.</p>
+    
+    <div class="quote">
+        Prenez soin de vous, et souvenez-vous : chaque petit pas compte !
+    </div>
+    
+    <p>Vous possédez désormais les outils : micro‑workouts, batch cooking, time‑blocking, test ALIGN. La question devient : comment ancrer ces bonnes pratiques pour les 5, 10, 20 prochaines années ?</p>
+    
+    <h2>7.1 Consolider le socle « 3 essentiels »</h2>
+    <h3>Mouvement – Nutrition – Sommeil</h3>
+    
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>Mouvement (≤ 20 min) :</strong> planifiez vos séances dans l'agenda avant de booker quoi que ce soit d'autre.</li>
+        <li><strong>Nutrition (batch) :</strong> refaites la session du dimanche 3 semaines d'affilée ; passé ce cap, 80 % des femmes la considèrent « naturelle ».</li>
+        <li><strong>Sommeil (7 h) :</strong> imposez une alarme « lumières douces » 45 min avant le coucher.</li>
+    </ul>
+    
+    <h2>7.2 Gérer les imprévus sans culpabilité</h2>
+    
+    <table>
+        <thead>
+            <tr><th>Scénario</th><th>Plan B pré‑écrit</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Semaine voyage</td><td>2 micro‑workouts hôtel (Core + Yoga), repas Align•20™ en salad‑bar, sieste 10 min.</td></tr>
+            <tr><td>Maladie/enfants</td><td>3 min de respiration + étirements lit, livraison healthy, focus sommeil.</td></tr>
+            <tr><td>Rush lancement</td><td>2 séances 10 min express + batch minimal (omelettes, salades en bocal).</td></tr>
+        </tbody>
+    </table>
+    
+    <p><strong>Retenez :</strong> « réduit » > « annulé ». Même 5 min conservent la dynamique.</p>
+    
+    <h2>7.3 Mesurer & célébrer le progrès</h2>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>Check mensuel :</strong> tour taille/hanches, score énergie, test ALIGN.</li>
+        <li><strong>Cible qualitative :</strong> monter deux étages sans essoufflement, finir la journée sans mal de dos.</li>
+        <li><strong>Rituel victoire :</strong> notez chaque +1 cm musculaire, –1 cm tour ; offrez‑vous un livre ou un massage.</li>
+    </ul>
+    
+    <h2>7.4 Évoluer – de l'alignement à la performance</h2>
+    <ul style="margin-left: 1rem; margin-bottom: 1rem;">
+        <li><strong>Progression charge :</strong> ajoutez un gilet lesté ou élastiques après 8 semaines sans plateau.</li>
+        <li><strong>Apprentissage :</strong> suivez un cours (cuisine rapide, yoga, mobilité) par trimestre.</li>
+        <li><strong>Mentorat/communauté :</strong> entourez‑vous d'autres dirigeantes qui cultivent santé + business.</li>
+    </ul>
+    
+    <h2>7.5 Rappel mindset</h2>
+    <div class="highlight-box">
+        <ul style="margin-left: 1rem;">
+            <li><strong>Petit & patient</strong> > grand & bref.</li>
+            <li><strong>Clarté avant volonté :</strong> quand l'action est planifiée, le mental suit.</li>
+            <li><strong>Le « non » est un acte d'amour :</strong> protéger vos valeurs, c'est protéger votre futur.</li>
+        </ul>
+    </div>
+    
+    <div class="quote">
+        ✨ Rappelle-toi : chaque petit pas compte. Tu ne recherches pas la perfection, tu bâtis la version de toi qui avance — alignée, énergisée et aux commandes de sa vie pro et perso.
+    </div>
+    
+    <p>Prenez soin de vous, et à chaque décision, demandez-vous : « Est-ce que cela honore mes 5 valeurs ? » Si la réponse est oui, avancez. Sinon, osez dire non : votre futur vous dira merci.</p>
+    
+    <div class="footer">
+        <a href="https://calendly.com/andreas-roux/coaching" target="_blank">JE RÉSERVE MON APPEL OFFERT</a>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">⚡ 5 créneaux gratuits/semaine · 🔒 Respect RGPD</p>
+        <p style="font-size: 0.8rem; opacity: 0.8;">© 2025 Align•20™ – Tous droits réservés – Mentions légales</p>
+    </div>
+    
+    <a href="#sommaire" class="home-button">Accueil</a>
+    <div class="page-number">Page 11</div>
+</div>
+
+</body>
+</html>
